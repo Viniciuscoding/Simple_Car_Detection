@@ -1,8 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-
-#import os
 import cv2
 import matplotlib.pyplot as plt
 import numpy as np
@@ -46,7 +41,6 @@ plt.imshow(dst_bin, cmap='gray', vmin=0, vmax=255)
 plt.title("Threshold Binary")
 
 
-
 kSize5 = (5,5)
 kSize11 = (11,11)
 kSize23 = (23,23)
@@ -59,7 +53,6 @@ kernel45 = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, kSize45)
 
 imageEroded1 = cv2.erode(dst_bin, kernel23, iterations=3)
 imageDilated1 = cv2.dilate(imageEroded1, kernel23, iterations=3)
-
 
 
 plt.figure(figsize=[20,12])
